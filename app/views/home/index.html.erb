@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+	Omgwow! You're signed in as <%= "#{current_user.name} (#{current_user.uid})" %>
+<% else %>
+	<%= link_to "Sign in with Salesforce", user_omniauth_authorize_path(:salesforce) %>
+<% end %>
